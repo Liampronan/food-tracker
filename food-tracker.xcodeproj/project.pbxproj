@@ -13,6 +13,9 @@
 		4F041B54289C7FFC00848CAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F041B52289C7FFC00848CAC /* Main.storyboard */; };
 		4F041B56289C7FFD00848CAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F041B55289C7FFD00848CAC /* Assets.xcassets */; };
 		4F041B59289C7FFD00848CAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F041B57289C7FFD00848CAC /* LaunchScreen.storyboard */; };
+		4F041B61289C830000848CAC /* LocalPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F041B60289C830000848CAC /* LocalPhotoService.swift */; };
+		4F041B64289C86FE00848CAC /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4F041B63289C86FE00848CAC /* SnapKit */; };
+		4F041B66289C948600848CAC /* ImageClassifierService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F041B65289C948600848CAC /* ImageClassifierService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,8 @@
 		4F041B55289C7FFD00848CAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F041B58289C7FFD00848CAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F041B5A289C7FFD00848CAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F041B60289C830000848CAC /* LocalPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPhotoService.swift; sourceTree = "<group>"; };
+		4F041B65289C948600848CAC /* ImageClassifierService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifierService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F041B64289C86FE00848CAC /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,12 +63,14 @@
 			isa = PBXGroup;
 			children = (
 				4F041B4C289C7FFC00848CAC /* AppDelegate.swift */,
+				4F041B55289C7FFD00848CAC /* Assets.xcassets */,
+				4F041B5A289C7FFD00848CAC /* Info.plist */,
+				4F041B57289C7FFD00848CAC /* LaunchScreen.storyboard */,
+				4F041B60289C830000848CAC /* LocalPhotoService.swift */,
+				4F041B52289C7FFC00848CAC /* Main.storyboard */,
 				4F041B4E289C7FFC00848CAC /* SceneDelegate.swift */,
 				4F041B50289C7FFC00848CAC /* ViewController.swift */,
-				4F041B52289C7FFC00848CAC /* Main.storyboard */,
-				4F041B55289C7FFD00848CAC /* Assets.xcassets */,
-				4F041B57289C7FFD00848CAC /* LaunchScreen.storyboard */,
-				4F041B5A289C7FFD00848CAC /* Info.plist */,
+				4F041B65289C948600848CAC /* ImageClassifierService.swift */,
 			);
 			path = "food-tracker";
 			sourceTree = "<group>";
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = "food-tracker";
+			packageProductDependencies = (
+				4F041B63289C86FE00848CAC /* SnapKit */,
+			);
 			productName = "food-tracker";
 			productReference = 4F041B49289C7FFC00848CAC /* food-tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 4F041B40289C7FFC00848CAC;
+			packageReferences = (
+				4F041B62289C86FE00848CAC /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 4F041B4A289C7FFC00848CAC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F041B66289C948600848CAC /* ImageClassifierService.swift in Sources */,
+				4F041B61289C830000848CAC /* LocalPhotoService.swift in Sources */,
 				4F041B51289C7FFC00848CAC /* ViewController.swift in Sources */,
 				4F041B4D289C7FFC00848CAC /* AppDelegate.swift in Sources */,
 				4F041B4F289C7FFC00848CAC /* SceneDelegate.swift in Sources */,
@@ -304,7 +320,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +348,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F041B62289C86FE00848CAC /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F041B63289C86FE00848CAC /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F041B62289C86FE00848CAC /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4F041B41289C7FFC00848CAC /* Project object */;
 }

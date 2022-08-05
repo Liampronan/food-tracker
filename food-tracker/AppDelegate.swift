@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  food-tracker
-//
-//  Created by Liam Ronan on 8/4/22.
-//
-
 import UIKit
 
 @main
