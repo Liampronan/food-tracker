@@ -22,7 +22,13 @@ class ViewController: UIViewController {
             switch result {
             case .success(let data):
                 let image = UIImage(data: data)
+                guard let image = image else {
+                    return
+                }
+                let results = ImageClassifierService.classify(image: image)
                 self?.imageView.image = image
+                // TODO: set classifications to textview so user can see them 
+                
             case .failure(let error):
                 print(error)
             }
